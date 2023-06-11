@@ -1,0 +1,82 @@
+# Cretae User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name":"Alief", 
+    "email":"alief@gmail.com",
+    "password":"1234567890",
+    "confpassword":"1234567890",
+    "role":"user"
+}
+###
+# GetAllUser
+GET http://localhost:5000/users
+
+###
+# GetUserById
+GET http://localhost:5000/users/cb035b62-4fe7-4db7-ba7d-aa5d9dde4e4c
+
+###
+# UpdateUser
+PATCH  http://localhost:5000/users/cb035b62-4fe7-4db7-ba7d-aa5d9dde4e4c
+Content-Type: application/json
+
+{
+    "name":"Ramdani",
+    "email":"adam@gmail.com",
+    "password":"1234567890",
+    "confpassword":"1234567890",
+    "role":"user"
+}
+
+### 
+# DeleteUserById
+DELETE  http://localhost:5000/users/f6401155-bb0c-4488-a56b-640d8a9be6ad
+
+
+###
+# login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"admin@gmail.com",
+    "password":"1234567890"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+###
+//get product
+GET http://localhost:5000/products
+
+###
+//single product
+GET http://localhost:5000/products/2550155b-1ad8-48e2-867e-ccdfbb84a48f
+
+###
+//Create product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name":"Batagor",
+    "price": 5000
+}
+
+###
+PATCH http://localhost:5000/products/2550155b-1ad8-48e2-867e-ccdfbb84a48f
+Content-Type: application/json
+
+{
+    "name":"RotiBakar",
+    "price": 2000
+}
+
+###
+DELETE http://localhost:5000/products/2550155b-1ad8-48e2-867e-ccdfbb84a48f
